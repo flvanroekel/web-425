@@ -1,8 +1,10 @@
-<mat-toolbar class="menu" role="header" color="primary">
+<div class="parent" fxLayout="row">
+
+  <mat-toolbar class="menu" role="header" color="primary">
   <mat-toolbar-row>
     <button mat-button class="toolbar__icon-button mat-button">
       <mat-icon>web</mat-icon>
-      <span style="margin-left: 5px !important">WEB 425</span>
+      <span style="margin-left: 5px !important;">WEB 425</span>
     </button>
     <button mat-button class="mat-button">
       About
@@ -34,12 +36,15 @@
   </mat-toolbar-row>
 </mat-toolbar>
 
-<div class="parent" fxLayout="row">
-  <div class="left" fxFlex="10%">Sidebar</div>
-  <div class="right" fxFlex="90%">
-    <router-outlet></router-outlet>
-  </div>
+<div class="left" fxFlex>
+    <br/><br/><br/>
+  <app-home></app-home>
+</div>
+
+<div class="right" fxFlex> 
+  <br/><br/><br/>
+  <app-login></app-login>
 </div>
 
 
-<router-outlet></router-outlet>
+</div>

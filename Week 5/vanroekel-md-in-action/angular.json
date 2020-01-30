@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "vanroekel-md-layout": {
+    "vanroekel-md-in-action": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/vanroekel-md-layout",
+            "outputPath": "dist/vanroekel-md-in-action",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -63,18 +63,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "vanroekel-md-layout:build"
+            "browserTarget": "vanroekel-md-in-action:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "vanroekel-md-layout:build:production"
+              "browserTarget": "vanroekel-md-in-action:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "vanroekel-md-layout:build"
+            "browserTarget": "vanroekel-md-in-action:build"
           }
         },
         "test": {
@@ -111,15 +111,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "vanroekel-md-layout:serve"
+            "devServerTarget": "vanroekel-md-in-action:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "vanroekel-md-layout:serve:production"
+              "devServerTarget": "vanroekel-md-in-action:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "vanroekel-md-layout"
+  "defaultProject": "vanroekel-md-in-action"
 }
