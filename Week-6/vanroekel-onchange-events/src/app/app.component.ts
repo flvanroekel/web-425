@@ -6,8 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'vanroekel-onchange-events';
-  myGreeting = 'Hello!';
-  myUser: { name: string } = { name: 'Karen'};
-}
+  title = 'app';
 
+  myGreeting = 'Hello!';
+  myUser: { name: string } = { name: 'Faye'};
+}
