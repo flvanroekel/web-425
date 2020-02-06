@@ -1,14 +1,22 @@
+/*
+=======================================
+  ; Title: app.module.ts
+  ; Author: Richard Krasso
+  ; Date: February 5, 2020
+  ; Modified By: Faye Van Roekel
+  ; Description: App.module.ts
+========================================
+*/
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppComponent } from './app.component';
-import { ChildComponent } from './child/child.component';
-import {FormsModule} from '@angular/forms';
-import { MatButtonModule, MatIconModule, MatMenuModule, MatToolbarModule } from '@angular/material';
-import { MatCardModule, MatFormFieldModule, MatInputModule, MatListModule } from '@angular/material';
-import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatButtonModule, MatCardModule, MatIconModule, MatMenuModule, MatFormFieldModule, MatInputModule, MatToolbarModule } from "@angular/material";
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { AppComponent } from './app.component';
+import { ChildComponent } from './child/child.component';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -17,18 +25,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   ],
   imports: [
     BrowserModule,
-    FormsModule,
     BrowserAnimationsModule,
-    MatButtonModule,
     MatCardModule,
-    MatFormFieldModule,
-    MatIconModule,
-    MatInputModule,
-    MatMenuModule,
+    MatButtonModule,
     MatToolbarModule,
+    MatFormFieldModule,
+    MatInputModule,
+    FormsModule,
     FlexLayoutModule,
-    MatSidenavModule,
-    MatListModule,
+    MatIconModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]

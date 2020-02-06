@@ -17,7 +17,7 @@ import { PriceQuote } from './price-quote/iprice-quote';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'thomason-output-properties';
+  title = 'vanroekel-output-properties';
 
   priceQuote: PriceQuote;
 

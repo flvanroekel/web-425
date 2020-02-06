@@ -1,39 +1,88 @@
-<mat-toolbar class="menu" role="header" color="primary">
-  <mat-toolbar-row><button mat-button class="toolbar__icon-button mat-button">
-  <mat-icon><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
-  <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
-  <path d="M0 0h24v24H0z" fill="none"/>
-  </svg></mat-icon><span style="margin-left: 5px !important;"></span></button>
 
-  <button mat-button class="mat-button">Web 425</button>
-  <button mat-button class="mat-button">About</button>
-  <button mat-button class="mat-button">Contact Us</button>
 
-  <div fxFlex></div>
+  <div class="parent" fxLayout="row">
 
-  <button class="toolbar__icon-button" [matMenuTriggerFor]="menu" mat-icon-button>
-  <mat-icon><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/>
-  <path d="M0 0h24v24H0z" fill="none"/>
-  </svg></mat-icon></button>
+    <mat-toolbar class="menu" role="header" color="primary">
+    <mat-toolbar-row>
+      <button mat-button class="toolbar__icon-button mat-button">
+        <mat-icon>web</mat-icon>
+        <span style="margin-left: 5px !important;">WEB 425</span>
+      </button>
+      <button mat-button class="mat-button">
+        About
+      </button>
+      <button mat-button class="mat-button">
+        Contact Us
+      </button>
 
-  <mat-menu #menu="matMenu"><button mat-menu-item>
-      <mat-icon><span>My Profile</span></mat-icon></button>
-      <button mat-menu-item><mat-icon><span>Settings</span></mat-icon></button>
-      <button mat-menu-item><mat-icon><span>Logout</span></mat-icon></button>
+      <div fxFlex></div>
+
+      <!-- User Profile -->
+      <button class="toolbar__icon-button" [matMenuTriggerFor]="menu" mat-icon-button>
+        <mat-icon>account_circle</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>
+          <mat-icon>perm_contact_calendar</mat-icon>
+          <span>My Profile</span>
+        </button>
+        <button mat-menu-item>
+          <mat-icon>settings</mat-icon>
+          <span>Settings</span>
+        </button>
+        <button mat-menu-item>
+          <mat-icon>exit_to_app</mat-icon>
+          <span>Logout</span>
+        </button>
       </mat-menu>
-      </mat-toolbar-row>
-      </mat-toolbar>       
+    </mat-toolbar-row>
+  </mat-toolbar>
 
-      <div class="parent">
+  <div class="left" fxFlex>
+      <br/><br/><br/>
 
-          <h2>Parent</h2>
-          <div>
-            Greeting: <input type="text" [(ngModel)]="myGreeting">
-          </div>    
+  </div>
 
-          <div>
-            User name: <input type="text" [(ngModel)]="myUser.name">
-          </div>
-          <app-child [greeting]="myGreeting" [user]="myUser"></app-child>
+  <div class="right" fxFlex>
+    <br/><br/><br/>
+    <div class="wrapper">
+      <br/><br/>
+    <div class="frm-login">
+            <mat-card-content class="login-panel frm-login-panel">
+              <mat-card-content class="frm-login-body">
+                  <h2>Parent</h2>
+                <br>
+                Greeting:
+                <mat-form-field appearance="outline">
+                    <div>
+                     <input type="text" matInput [(ngModel)]="myGreeting">
+                    </div>
+                  </mat-form-field>
+                    <br>
+                    User name:
+                    <mat-form-field appearance="outline">
+                      <div>
+                       <input type="text" matInput [(ngModel)]="myUser.name">
+                      </div>
+                      <!--<input type="text" matInput placeholder="Enter stock (e.g. AAPPL)" (change)="onChangeEvent($event)">-->
+                      <mat-hint>Enter Value Above</mat-hint>
+                    </mat-form-field>
+            </mat-card-content>
+          </mat-card-content>
+
+          <br/><br/><br/>
+
+          <mat-card-content class="login-panel frm-login-panel">
+              <mat-card-content class="frm-login-body">
+                <br>
+                <app-child [greeting]="myGreeting" [user]="myUser"></app-child>
+                <br>
+            </mat-card-content>
+          </mat-card-content>
+
         </div>
+      </div>
+  </div>
+
+
+  </div>
