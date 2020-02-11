@@ -50,7 +50,7 @@
                            pattern="^[0-9]*$"
                            minlength="10"
                            #phone="ngModel"
-                           [class.hasError]="phone.isvalid && phone.touched">
+                           [class.hasError]="phone.valid && phone.touched">
                       <div [hidden]="phone.valid || phone.pristine">
                           <div class="error" [hidden]="!phone.hasError('minlength')">Phone has to have at least 10 digits</div>
                           <div class="error" [hidden]="!phone.hasError('required')">Phone is required</div>
