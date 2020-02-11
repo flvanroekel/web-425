@@ -1,31 +1,33 @@
 .menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 2;
-    color: white;
-  }
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  color: white;
+}
   
-  .left {
-    background-color: aqua;
-  }
+.wrapper {
+  padding: 70px 70px 0;
+  display: block;
+}
   
-  .right {
-    background-color: chocolate;
-  }
-   
-   .wrapper {
-    width: 100%;
-    height: 100vh;
-  }
-  
-  .frm-login {
-    width: 80%;
-    margin: 20vh auto;
-  }
-  
-  mat-card-actions {
-    text-align: right;
-    margin-right: 20px;
-  }
+.md{
+  text-decoration:none;
+  color: white;
+}
+
+.example-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.example-events {
+  width: 300px;
+  height: 200px;
+  overflow: auto;
+  border: 1px solid #555;
+}
