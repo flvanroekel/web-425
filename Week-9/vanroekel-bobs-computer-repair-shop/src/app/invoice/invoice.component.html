@@ -1,38 +1,54 @@
-<h1 mat-dialog-title>Login Form</h1>
-<div mat-dialog-content>
-    <form #f="ngForm" (ngSubmit)="onSubmit(f.value); f.reset()">
-        <div ngModelGroup="checkGroup">
-            <h2>Services</h2>
-              <mat-checkbox name="passwordReset" ngModel >Password Reset ($39.99)</mat-checkbox>
-              <br />
-              <mat-checkbox name="spywareRemoval" ngModel >Spyware Removal ($99.99)</mat-checkbox>
-              <br />
-              <mat-checkbox name="ramUpgrade" ngModel >RAM Upgrade ($129.99)</mat-checkbox>
-              <br />
-              <mat-checkbox name="softwareInstall" ngModel >Software Installation ($49.99)</mat-checkbox>
-              <br />
-              <mat-checkbox name="tuneUp" ngModel >Tune-up ($89.99)</mat-checkbox>
-              <br />
-              <mat-checkbox name="keyCleaning" ngModel >Keyboard Cleaning ($45.00)</mat-checkbox>
-              <br />
-              <mat-checkbox name="diskClean" ngModel >Disk Clean-up ($149.99)</mat-checkbox>
-              <br />
-        </div>
-            <h2>Standard Fees</h2>
-
-                <input matInput type="text" ngModel  name="parts" required pattern="^[0-9]*$" placeholder="Cost of Parts" #parts="ngModel" [class.hasError]="parts.isValid && parts.touched">
-                <div [hidden]="parts.valid || parts.pristine">
-                    <div class="error" [hidden]="!parts.hasError('required')">Cost of Parts required</div>
-                    <div class="error" [hidden]="!parts.hasError('pattern')">Only digits are allowed</div>
-                  </div>
-                  <input matInput type="text" ngModel  name="labor" required pattern="^[0-9]*$" placeholder="Labor Cost $50 hourly" #labor="ngModel" [class.hasError]="labor.isValid && labor.touched">
-                  <div [hidden]="labor.valid || labor.pristine">
-                      <div class="error" [hidden]="!labor.hasError('required')">Must enter the amount of hours </div>
-                      <div class="error" [hidden]="!labor.hasError('pattern')">Only digits are allowed</div>
-                    </div>
-
-          <button mat-raised-button type="reset">Cancel</button>
-          <button mat-raised-button color="primary" type="submit">Submit</button>
-      </form>
-
-</div>
+<!-- Dialog -->
+<div class="container">
+    <h2 mat-dialog-title>Invoice</h2>
+    <!-- dialog content -->
+    <mat-dialog-content class="invoiceStyle">
+      <h4>{{ order.password.name }}</h4>
+  
+      <p>{{ order.password.price | currency }}</p>
+  
+      <h4>{{ order.spyware.name }}</h4>
+  
+      <p>{{ order.spyware.price | currency }}</p>
+  
+      <h4>{{ order.memory.name }}</h4>
+  
+      <p>{{ order.memory.price | currency }}</p>
+  
+      <h4>{{ order.software.name }}</h4>
+  
+      <p>{{ order.software.price | currency }}</p>
+  
+      <h4>{{ order.tuneUp.name }}</h4>
+  
+      <p>{{ order.tuneUp.price | currency }}</p>
+  
+      <h4>{{ order.cleanUp.name }}</h4>
+  
+      <p>{{ order.cleanUp.price | currency }}</p>
+  
+      <h4>{{ order.keyboard.name }}</h4>
+  
+      <p>{{ order.keyboard.price | currency }}</p>
+  
+      <h4>{{ order.labor.name }}</h4>
+  
+      <p>{{ order.labor.price | currency }}</p>
+  
+      <h4>{{ order.parts.name }}</h4>
+  
+      <p>{{ order.parts.info }}</p>
+      <br />
+      <hr />
+      <h4>{{ order.total.name }}</h4>
+  
+      <p>{{ order.total.price | currency }}</p>
+  
+    </mat-dialog-content>
+  
+  
+    <!-- dialog button -->
+    <mat-dialog-actions>
+      <button mat-raised-button color="warn" (click)="close()">Close</button>
+    </mat-dialog-actions>
+  </div>

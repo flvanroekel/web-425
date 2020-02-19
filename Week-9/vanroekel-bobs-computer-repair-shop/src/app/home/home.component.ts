@@ -7,14 +7,19 @@
 ;===========================================
 */
 
+
 import { Component, OnInit } from '@angular/core';
 
+
+
 @Component({
-  selector: 'app-navigation',
-  templateUrl: './navigation.component.html',
-  styleUrls: ['./navigation.component.css']
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.css']
 })
-export class NavigationComponent implements OnInit {
+
+
+export class HomeComponent implements OnInit {
 
   constructor() { }
 
