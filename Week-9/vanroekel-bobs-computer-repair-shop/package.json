@@ -23,8 +23,9 @@
     "@angular/platform-browser": "~9.0.1",
     "@angular/platform-browser-dynamic": "~9.0.1",
     "@angular/router": "^9.0.2",
+    "@types/webrtc": "0.0.26",
     "angular-material": "^1.1.21",
-    "rxjs": "~6.5.4",
+    "rxjs": "^6.5.4",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"
   },

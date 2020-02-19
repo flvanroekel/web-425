@@ -7,7 +7,7 @@
 ;=============================================
 */
 import { Component, OnInit } from '@angular/core';
-import {MAT_DIALOG_DATA} from '@angular/material';
+import { MatDialogConfig, MatDialog } from "@angular/material/dialog";
 import { Inject } from '@angular/core';
 @Component({
   selector: 'app-total',
@@ -16,9 +16,7 @@ import { Inject } from '@angular/core';
 })
 export class TotalComponent implements OnInit {
 
-  constructor(
-    @Inject(MAT_DIALOG_DATA) public data:any
-  ) { }
+  constructor(public dialog: MatDialog) {}
 
   ngOnInit() {
   }

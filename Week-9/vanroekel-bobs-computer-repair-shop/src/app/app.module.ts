@@ -8,7 +8,7 @@
 */
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {MatDialogModule} from '@angular/material/dialog';
+import { MatDialogModule } from '@angular/material/dialog';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import {MatMenuModule, matMenuAnimations} from '@angular/material/menu';

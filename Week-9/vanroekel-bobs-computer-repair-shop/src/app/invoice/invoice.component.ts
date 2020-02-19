@@ -8,7 +8,7 @@
 */
 
 import { Component, OnInit } from '@angular/core';
-import { MatDialog } from '@angular/material';
+import { MatDialogModule } from '@angular/material/dialog';
 import { TotalComponent } from '../total/total.component';
 
 @Component({
@@ -53,7 +53,7 @@ export class InvoiceComponent implements OnInit {
     totalParts:0
   }
 
-  constructor(private dialog:MatDialog) { }
+  constructor(public dialog: MatDialog) {}
 
   ngOnInit() {
   }
@@ -99,7 +99,7 @@ export class InvoiceComponent implements OnInit {
 //    this.partCost=formData.checkGroup.parts
 //    this.totalCost+=this.services.totalLabor
 // console.log(this.totalCost=+(this.totalLabor+this.partCost))
-  this.dialog.open(TotalComponent,{
+  this.MatDialog.open(TotalComponent,{
 data:{
   totalCost:this.totalCost.toFixed(2)
 }
