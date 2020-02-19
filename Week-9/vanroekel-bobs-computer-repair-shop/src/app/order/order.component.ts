@@ -1,9 +1,9 @@
 /*
 ==============================================
-; Title: total.component.ts
+; Title: order.component.ts
 ; Date: 19 February 2020
 ; Author: Faye Van Roekel
-; Description: total.component.ts
+; Description: order.component.ts
 ;=============================================
 */
 

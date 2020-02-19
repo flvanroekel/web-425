@@ -1,9 +1,9 @@
 /*
 ==============================================
-; Title: navigation.component.ts
+; Title: home.component.ts
 ; Date: 19 February 2020
 ; Author: Faye Van Roekel
-; Description: navigation.component.ts
+; Description: home.component.ts
 ;===========================================
 */
 
