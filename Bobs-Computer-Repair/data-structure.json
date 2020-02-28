@@ -1,0 +1,78 @@
+{
+    "user": [
+        {
+            "email": "fvanroekel@testing.com",
+            "password": "testing",
+            "name": "Faye Van Roekel",
+            "address": "Madeuptown, USA",
+            "state": "IA",
+            "zip": "11111",
+            "date_created": "02/13/2020",
+            "last_updated": "02/13/2020"
+        }
+    ],
+
+    "navigation": [
+        {
+            "menu_bar": "Home",
+            "order": 200
+        },
+        {
+            "menu_bar": "Types of Services",
+            "order": 300
+        },
+        {
+            "menu_bar": "Service ID",
+            "order": 400
+        },
+        {
+            "menu_bar": "Invoice",
+            "order": 500
+        },
+        {
+            "menu_bar": "Checkout",
+            "order": 600
+        }
+    ],
+    "services": [
+        {
+            "name": "Password Reset",
+            "cost": "$39.99"
+        },
+        {
+            "name": "Spyware Removal",
+            "cost": "$99.99"
+        },
+        {
+            "name": "RAM Upgrade",
+            "cost": "$129.99"
+        },
+        {
+            "name": "Software Installation",
+            "cost": "$49.99"
+        },
+        {
+            "name": "Tune-Up",
+            "cost": "$89.99"
+        },
+        {
+            "name": "Keyboard Cleaning",
+            "cost": "$45.00"
+        },
+        {
+            "name": "Disk Clean-up",
+            "cost": "$149.99"
+        }
+    ],
+    "invoice": [
+        {
+            "username": "",
+            "services_provided": "",
+            "parts_cost": "$",
+            "labor_hr": "$",
+            "total_cost": "$",
+            "delivery": "",
+            "date_created": ""
+        }
+    ]
+}
